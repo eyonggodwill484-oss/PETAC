@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, Eye, Heart, Award, Users, TrendingUp } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
+import image from ''
 
 export function About() {
   useSEO('About Us', 'Learn more about PETAC Consulting SARL, our core values, mission, and expertise in environmental and petroleum services.');
@@ -53,7 +54,7 @@ export function About() {
           >
             <h1 className="text-5xl md:text-6xl mb-4">About PETAC Consulting SARL</h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-              Your trusted partner in petroleum, environmental monitoring, and quality control consulting
+              Your trusted partner in petroleum analysis, water analysis, environmental monitoring,calibration and quality control consulting
             </p>
           </motion.div>
         </div>
@@ -71,13 +72,13 @@ export function About() {
               <h2 className="text-4xl md:text-5xl mb-6">Who We Are</h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  PETAC Consulting SARL is a dynamic and forward-thinking consulting company established in January 2026 and headquartered in Douala – Ndogbong, Cameroon. We specialize in delivering high-quality technical and consulting services in the fields of petroleum, water, environmental monitoring analysis, and quality control.
+                  PETAC Consulting SARL is a dynamic and forward-thinking consulting  and service providing  company established in January 2026 and headquartered in Douala – Ndogbong, Cameroon. We specialize in delivering high-quality technical and consulting services in the fields of petroleum, water, environmental monitoring analysis, calibration, maintenance and quality control.
                 </p>
                 <p>
                   At PETAC Consulting, we are committed to providing accurate, reliable, and timely solutions that support industries, organizations, and institutions in maintaining compliance with international standards while optimizing operational performance.
                 </p>
                 <p>
-                  Our expertise covers inspection, sampling, transportation, laboratory testing, and data analysis of petroleum products, water, soil, air, meteorological parameters, and noise. We apply rigorous methodologies aligned with globally recognized standards such as ISO 17025 and ISO 1996 to ensure precision and credibility in every project.
+                  Our expertise covers inspection, sampling, transportation, laboratory testing, calibration and data analysis of petroleum products, water, soil, air, meteorological parameters, and Maintainance. We apply rigorous methodologies aligned with globally recognized standards such as ISO 17025 and ISO 1996 to ensure precision and credibility in every project.
                 </p>
                 <p>
                   Driven by a passion for excellence, our team combines technical competence with modern technologies to deliver results that help clients and investors make informed decisions, manage risks, and improve quality assurance systems.
@@ -92,10 +93,15 @@ export function About() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
+              {/* Replace the src below with the actual image once added to your project */}
               <img loading="lazy"
-                src="https://images.unsplash.com/photo-1766297248047-6ec337099802?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=800"
-                alt="Scientist holding flask with liquid in laboratory"
+                src="/about-image.jpg"
+                alt="PETAC Consulting Representative"
                 className="rounded-lg w-full h-[500px] object-cover shadow-xl"
+                onError={(e) => {
+                  // Fallback in case the image hasn't been placed yet
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1766297248047-6ec337099802?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=800";
+                }}
               />
               <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-lg shadow-lg">
                 <p className="text-5xl mb-1">2026</p>

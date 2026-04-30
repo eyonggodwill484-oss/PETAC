@@ -14,7 +14,7 @@ export function Footer() {
               className="h-16 w-auto object-contain bg-white/10 p-2 rounded-lg"
             />
             <p className="text-sm text-primary-foreground/80">
-              Professional consulting services in petroleum, environmental monitoring, and quality control.
+              Professional consulting services in petroleum, water, environmental monitoring, calibration and quality control.
             </p>
           </div>
 
@@ -33,10 +33,11 @@ export function Footer() {
             <h3 className="mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>Petroleum Analysis</li>
-              <li>Environmental Testing</li>
+              <li>Water Analysis</li>
+              <li>Environmental Monitoring</li>
               <li>Laboratory Services</li>
-              <li>Quality Control</li>
-              <li>Sampling & Inspection</li>
+              <li>Calibration</li>
+              <li>Maintainance</li>
             </ul>
           </div>
 

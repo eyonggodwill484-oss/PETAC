@@ -59,7 +59,7 @@ export function Services() {
     {
       icon: Mountain,
       title: 'Soil Analysis',
-      description: 'We offer comprehensive soil analysis services to assess quality, contamination levels, and suitability for various applications. We analyze heavy metals in soil, hydrocarbons contaminants in soil etc. Our results support environmental protection, agricultural productivity, and construction planning, all aligned with recognized global standards.',
+      description: 'We offer comprehensive soil analysis services to assess quality, contamination levels, and suitability for various applications. We analyze heavy metals in soil, hydrocarbons contaminants in soil etc. Our results support environmental protection, agricultural productivity, and construction planning, all aligned with recognized global global IFC soil contaminationand quality reference Standard time .',
     },
     {
       icon: Leaf,
@@ -68,7 +68,7 @@ export function Services() {
     },
     {
       icon: Scale,
-      title: 'Calibration of Equipment and Items',
+      title: 'Calibration of Equipment and Equipment',
       description: 'We ensure that instruments and equipment operate at optimal accuracy through professional calibration services. By adhering to international metrology standards, we enhance measurement reliability, reduce uncertainties, and support high-quality outputs across operations in alignment with ISO/IEC 17025 guidelines.',
     },
     {
@@ -78,7 +78,7 @@ export function Services() {
     },
     {
       icon: GraduationCap,
-      title: 'Recruitment of Academic & Internship Students',
+      title: 'Recruitment of Academic & professional Internship Students',
       description: 'We support the development of future professionals by recruiting and placing qualified academic and internship students. This initiative helps bridge the gap between theoretical knowledge and practical industry experience.',
     },
     {
@@ -98,8 +98,8 @@ export function Services() {
     },
     {
       icon: FlaskConical,
-      title: 'Setting Up of Standard Petroleum Laboratories',
-      description: 'We provide end-to-end support in establishing petroleum laboratories that meet international standards. Our expertise ensures that facilities are designed for efficiency, accuracy, and compliance, enabling clients to achieve reliable analytical results.',
+      title: 'Setting Up of Standard Petroleum, water, & environmental Laboratories',
+      description: 'We provide end-to-end support in establishing petroleum, water & environmental laboratories that meet international standards. Our expertise ensures that facilities are designed for efficiency, accuracy, and compliance, enabling clients to achieve reliable analytical results.',
     },
     {
       icon: TrendingUp,
@@ -178,7 +178,7 @@ export function Services() {
             </div>
             <h2 className="text-3xl md:text-5xl mb-8 font-bold">Our Commitment to International Standards</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Across all our services, PETAC Consulting SARL integrates internationally recognized standards methods and specifications to ensure consistency, accuracy, and credibility. This commitment enables us to deliver reliable results, improved operational performance, and enhanced client confidence, positioning us as a trusted partner in technical consulting and analytical services.
+              Across all our services, PETAC Consulting SARL integrates internationally recognized standards ASTM, methods, ISO/IEC compliance  and specifications to ensure consistency, accuracy, and credibility. This commitment enables us to deliver reliable results, improved operational performance, and enhanced client confidence, positioning us as a trusted partner in technical consulting and analytical services.
             </p>
           </motion.div>
         </div>

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router';
 import { ArrowRight, CheckCircle, Droplet, FlaskConical, Shield, Factory } from 'lucide-react';
-import { useSEO } from '../hooks/useSEO';
+import { useSEO } from '../hooks/useSEO';  
+
 
 const heroImages = [
   {
@@ -133,7 +134,7 @@ export function Home() {
             >
               Excellence in{' '}
               <span className="text-accent">
-                Petroleum
+                Petroleum, water
               </span>{' '}
               &amp; Environmental Consulting
             </motion.h1>
@@ -145,7 +146,7 @@ export function Home() {
               transition={{ duration: 0.75, delay: 0.3 }}
               className="text-lg md:text-xl text-white/75 mb-10 max-w-2xl leading-relaxed"
             >
-              Delivering accurate, reliable, and internationally compliant technical services in petroleum analysis, environmental monitoring, and quality control — from Douala, Cameroon.
+              Delivering accurate, reliable, and internationally compliant technical services in petroleum analysis, water analysis,  environmental monitoring, and quality control — from Douala, Cameroon.
             </motion.p>
 
             {/* CTAs */}

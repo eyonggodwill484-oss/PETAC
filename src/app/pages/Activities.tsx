@@ -35,7 +35,7 @@ export function Activities() {
       date: 'January 2026',
       location: 'Industrial Zone, Douala',
       image: 'https://images.unsplash.com/photo-1730584474428-83f3cfc20a73?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=800',
-      description: 'Air quality and noise level monitoring for industrial facilities to ensure compliance.',
+      description: 'Air quality and noise level monitoring & soil contamination monitoring.',
       category: 'Environmental',
     },
     {
