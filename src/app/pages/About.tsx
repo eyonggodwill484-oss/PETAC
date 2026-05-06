@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { Target, Eye, Heart, Award, Users, TrendingUp } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
-import image from ''
+import Image1 from '../../imports/IMAGE1.png';
+import ThemImage from '../../imports/them.png';
+
 
 export function About() {
   useSEO('About Us', 'Learn more about PETAC Consulting SARL, our core values, mission, and expertise in environmental and petroleum services.');
@@ -36,15 +38,15 @@ export function About() {
 
   return (
     <div>
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1758573467057-99f26217b2ae?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400"
-            alt="Man working at a microscope in a laboratory"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
-        </div>
+       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden animate-water-ripple">
+         <div className="absolute inset-0">
+           <img loading="lazy"
+             src={ThemImage}
+             alt="PETAC Consulting Team"
+             className="w-full h-full object-cover"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
@@ -86,23 +88,18 @@ export function About() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative"
-            >
-              {/* Replace the src below with the actual image once added to your project */}
-              <img loading="lazy"
-                src="/about-image.jpg"
-                alt="PETAC Consulting Representative"
-                className="rounded-lg w-full h-[500px] object-cover shadow-xl"
-                onError={(e) => {
-                  // Fallback in case the image hasn't been placed yet
-                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1766297248047-6ec337099802?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=800";
-                }}
-              />
+             <motion.div
+               initial={{ opacity: 0, x: 30 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+               className="relative"
+             >
+               <img loading="lazy"
+                 src={Image1}
+                 alt="PETAC Consulting Representative"
+                 className="rounded-lg w-full h-[500px] object-cover shadow-xl"
+               />
               <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-lg shadow-lg">
                 <p className="text-5xl mb-1">2026</p>
                 <p className="text-sm">Established</p>
@@ -114,22 +111,22 @@ export function About() {
 
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-primary text-primary-foreground p-8 rounded-xl"
-            >
-              <div className="w-14 h-14 bg-accent rounded-lg flex items-center justify-center mb-6">
-                <Target className="text-accent-foreground" size={28} />
-              </div>
-              <h2 className="text-3xl mb-4">Our Mission</h2>
-              <p className="text-lg text-primary-foreground/90">
-                To provide dependable and high-quality consulting, inspection, sampling, and analytical services that enhance environmental safety, product integrity, and operational efficiency for our clients.
-              </p>
-            </motion.div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+               className="bg-primary text-primary-foreground p-8 rounded-xl animate-water-ripple"
+             >
+               <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6">
+                 <Target className="text-secondary animate-water-drop" size={28} />
+               </div>
+               <h2 className="text-3xl mb-4">Our Mission</h2>
+               <p className="text-lg text-primary-foreground/90">
+                 To provide dependable and high-quality consulting, inspection, sampling, and analytical services that enhance environmental safety, product integrity, and operational efficiency for our clients.
+               </p>
+             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

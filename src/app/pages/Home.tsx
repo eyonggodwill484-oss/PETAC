@@ -1,22 +1,28 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router';
-import { ArrowRight, CheckCircle, Droplet, FlaskConical, Shield, Factory } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle, Droplet, FlaskConical, Shield, Factory } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';  
+import ThemImage from '../../imports/them.png';
 
 
 const heroImages = [
-  {
-    src: 'https://images.unsplash.com/photo-1596980786765-775174984ec9?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400',
-    alt: 'Industrial oil refinery complex at dusk',
-    caption: 'Petroleum Analysis',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1726731782158-fcf6822b6ca4?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400',
-    alt: 'Industrial pipeline infrastructure',
-    caption: 'Quality Control',
-  },
-];
+   {
+     src: 'https://images.unsplash.com/photo-1596980786765-775174984ec9?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400',
+     alt: 'Industrial oil refinery complex at dusk',
+     caption: 'Petroleum Analysis',
+   },
+   {
+     src: 'https://images.unsplash.com/photo-1726731782158-fcf6822b6ca4?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400',
+     alt: 'Industrial pipeline infrastructure',
+     caption: 'Quality Control',
+   },
+   {
+     src: ThemImage,
+     alt: 'PETAC Consulting Team',
+     caption: 'Our Expert Team',
+   },
+ ];
 
 const heroStats = [
   { value: '2026', label: 'Est. Year' },
@@ -27,14 +33,14 @@ const heroStats = [
 export function Home() {
   useSEO('Home', 'Welcome to PETAC Consulting SARL. Your trusted partner in petroleum analysis, environmental monitoring, and quality control.');
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }, []);
 
   const services = [
     {
@@ -74,6 +80,16 @@ export function Home() {
     { name: 'Environmental Services', image: 'https://images.unsplash.com/photo-1766297247924-6638d54e7c89?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=800' },
   ];
 
+  // Mock partner data - will be replaced with real logos later
+  const partners = [
+    { name: 'Partner A', logo: 'https://via.placeholder.com/150x80?text=Partner+A' },
+    { name: 'Partner B', logo: 'https://via.placeholder.com/150x80?text=Partner+B' },
+    { name: 'Partner C', logo: 'https://via.placeholder.com/150x80?text=Partner+C' },
+    { name: 'Partner D', logo: 'https://via.placeholder.com/150x80?text=Partner+D' },
+    { name: 'Partner E', logo: 'https://via.placeholder.com/150x80?text=Partner+E' },
+    { name: 'Partner F', logo: 'https://via.placeholder.com/150x80?text=Partner+F' },
+  ];
+
   return (
     <div>
       {/* ── HERO SECTION ── */}
@@ -110,9 +126,9 @@ export function Home() {
           />
         </div>
 
-        {/* Main content — left-aligned */}
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-24">
-          <div className="max-w-3xl">
+       {/* Main content — left-aligned */}
+         <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-24 animate-water-ripple">
+           <div className="max-w-3xl">
 
             {/* Badge */}
             <motion.div
@@ -171,13 +187,13 @@ export function Home() {
               </Link>
             </motion.div>
 
-            {/* Trust stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, delay: 0.6 }}
-              className="flex gap-8 border-t border-white/15 pt-8"
-            >
+             {/* Trust stats */}
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.75, delay: 0.6 }}
+               className="flex gap-8 border-t border-white/15 pt-8 animate-float"
+             >
               {heroStats.map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl md:text-3xl font-extrabold text-white">{stat.value}</div>
@@ -188,58 +204,58 @@ export function Home() {
           </div>
         </div>
 
-        {/* Bottom-right: slide counter + dots */}
-        <div className="absolute bottom-8 right-8 z-20 flex flex-col items-end gap-3">
-          {/* Current slide caption */}
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={currentSlide}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.4 }}
-              className="text-xs font-semibold tracking-[0.2em] uppercase text-white/60"
-            >
-              {heroImages[currentSlide].caption}
-            </motion.span>
-          </AnimatePresence>
-          {/* Slide counter */}
-          <div className="text-white/40 text-xs font-mono">
-            <span className="text-white font-semibold">{String(currentSlide + 1).padStart(2, '0')}</span>
-            {' / '}{String(heroImages.length).padStart(2, '0')}
-          </div>
-          {/* Dot indicators */}
-          <div className="flex gap-2">
-            {heroImages.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentSlide(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                className={`transition-all duration-300 rounded-full ${
-                  i === currentSlide
-                    ? 'w-6 h-2 bg-accent'
-                    : 'w-2 h-2 bg-white/35 hover:bg-white/60'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
+       {/* Bottom-right: slide counter + dots */}
+         <div className="absolute bottom-8 right-8 z-20 flex flex-col items-end gap-3 animate-water-current">
+           {/* Current slide caption */}
+           <AnimatePresence mode="wait">
+             <motion.span
+               key={currentSlide}
+               initial={{ opacity: 0, y: 8 }}
+               animate={{ opacity: 1, y: 0 }}
+               exit={{ opacity: 0, y: -8 }}
+               transition={{ duration: 0.4 }}
+               className="text-xs font-semibold tracking-[0.2em] uppercase text-white/60"
+             >
+               {heroImages[currentSlide].caption}
+             </motion.span>
+           </AnimatePresence>
+           {/* Slide counter */}
+           <div className="text-white/40 text-xs font-mono">
+             <span className="text-white font-semibold">{String(currentSlide + 1).padStart(2, '0')}</span>
+             {' / '}{String(heroImages.length).padStart(2, '0')}
+           </div>
+           {/* Dot indicators */}
+           <div className="flex gap-2">
+             {heroImages.map((_, i) => (
+               <button
+                 key={i}
+                 onClick={() => setCurrentSlide(i)}
+                 aria-label={`Go to slide ${i + 1}`}
+                 className={`transition-all duration-300 rounded-full ${
+                   i === currentSlide
+                     ? 'w-6 h-2 bg-accent'
+                     : 'w-2 h-2 bg-white/35 hover:bg-white/60'
+                 }`}
+               />
+             ))}
+           </div>
+         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl mb-4">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions for your technical and consulting needs
-            </p>
-          </motion.div>
+       <section className="py-20 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+             className="text-center mb-12 animate-water-wave"
+           >
+             <h2 className="text-4xl md:text-5xl mb-4">Our Services</h2>
+             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+               Comprehensive solutions for your technical and consulting needs
+             </p>
+           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
@@ -251,9 +267,9 @@ export function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-card border border-border rounded-xl hover:shadow-lg transition-all hover:-translate-y-1 group"
               >
-                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                  <service.icon className="text-accent" size={28} />
-                </div>
+                 <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                   <service.icon className="text-accent size={28} animate-water-drop" />
+                 </div>
                 <h3 className="mb-2">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </motion.div>
@@ -317,20 +333,20 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl mb-4">Why Choose PETAC</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Your trusted partner for technical excellence and reliability
-            </p>
-          </motion.div>
+       <section className="py-20 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+             className="text-center mb-12 animate-water-wave"
+           >
+             <h2 className="text-4xl md:text-5xl mb-4">Why Choose PETAC</h2>
+             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+               Your trusted partner for technical excellence and reliability
+             </p>
+           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {whyChooseUs.map((reason, index) => (
@@ -350,46 +366,99 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl mb-4">Industries We Serve</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Providing specialized consulting services across multiple sectors
-            </p>
-          </motion.div>
+       <section className="py-20 bg-muted">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+           >
+             <h2 className="text-4xl md:text-5xl mb-4">Industries We Serve</h2>
+             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+               Providing specialized consulting services across multiple sectors
+             </p>
+           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={industry.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative h-64 rounded-xl overflow-hidden group cursor-pointer"
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+             {industries.map((industry, index) => (
+               <motion.div
+                 key={industry.name}
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 whileInView={{ opacity: 1, scale: 1 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: index * 0.1 }}
+                 className="relative h-64 rounded-xl overflow-hidden group cursor-pointer"
+               >
+                 <img loading="lazy"
+                   src={industry.image}
+                   alt={industry.name}
+                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent flex items-end">
+                   <h3 className="text-white p-6 w-full">{industry.name}</h3>
+                 </div>
+               </motion.div>
+             ))}
+           </div>
+         </div>
+       </section>
+
+        {/* Partners Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <h2 className="text-4xl md:text-5xl mb-6">Our Trusted Partners</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Collaborating with industry leaders to deliver exceptional service
+              </p>
+            </motion.div>
+            
+            {/* Partners Marquee */}
+            <div className="relative overflow-hidden mt-10">
+              <div 
+                className="flex space-x-10" 
+                style={{
+                  animation: 'marquee 20s linear infinite',
+                  display: 'flex'
+                }}
               >
-                <img loading="lazy"
-                  src={industry.image}
-                  alt={industry.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent flex items-end">
-                  <h3 className="text-white p-6 w-full">{industry.name}</h3>
-                </div>
-              </motion.div>
-            ))}
+                {partners.map((partner, index) => (
+                  <div key={partner.name} className="flex-shrink-0 flex items-center justify-center px-4">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name} 
+                      className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                ))}
+                {/* Duplicate for seamless looping */}
+                {partners.map((partner, index) => (
+                  <div key={partner.name + '-clone'} className="flex-shrink-0 flex items-center justify-center px-4">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name} 
+                      className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                ))}
+              </div>
+              <style>{`
+                @keyframes marquee {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(-50%); }
+                }
+              `}</style>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 bg-primary text-primary-foreground">
+       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

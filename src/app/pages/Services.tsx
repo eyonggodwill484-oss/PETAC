@@ -68,7 +68,7 @@ export function Services() {
     },
     {
       icon: Scale,
-      title: 'Calibration of Equipment and Equipment',
+      title: 'Calibration of Equipment and Instruments',
       description: 'We ensure that instruments and equipment operate at optimal accuracy through professional calibration services. By adhering to international metrology standards, we enhance measurement reliability, reduce uncertainties, and support high-quality outputs across operations in alignment with ISO/IEC 17025 guidelines.',
     },
     {
@@ -115,15 +115,15 @@ export function Services() {
 
   return (
     <div>
-      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1581093449818-2655b2467fd6?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400"
-            alt="person in purple long sleeve shirt and white pants sitting on gray and black digital device"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/80 to-primary/95"></div>
-        </div>
+       <section className="relative h-[65vh] flex items-center justify-center overflow-hidden animate-water-ripple">
+         <div className="absolute inset-0">
+           <img loading="lazy"
+             src="https://images.unsplash.com/photo-1581093449818-2655b2467fd6?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400"
+             alt="person in purple long sleeve shirt and white pants sitting on gray and black digital device"
+             className="w-full h-full object-cover animate-water-wave"
+           />
+           <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/80 to-primary/95"></div>
+         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white mt-8">
           <motion.div
@@ -143,17 +143,17 @@ export function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesList.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-card border border-border p-8 rounded-2xl hover:shadow-2xl hover:border-accent/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2"
-              >
-                <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-500 shadow-sm">
-                  <service.icon className="text-accent group-hover:text-white transition-colors duration-500" size={32} />
-                </div>
+               <motion.div
+                 key={index}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true, margin: "-50px" }}
+                 transition={{ duration: 0.5, delay: index * 0.05 }}
+                 className="bg-card border border-border p-8 rounded-2xl hover:shadow-2xl hover:border-accent/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 animate-water-ripple"
+               >
+                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-500 shadow-sm">
+                   <service.icon className="text-accent group-hover:text-white transition-colors duration-500 animate-water-drop" size={32} />
+                 </div>
                 <h3 className="text-2xl font-bold mb-4 leading-tight group-hover:text-accent transition-colors duration-300">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">{service.description}</p>
               </motion.div>

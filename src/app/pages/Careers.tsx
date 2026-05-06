@@ -73,15 +73,15 @@ export function Careers() {
 
   return (
     <div>
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1766297247924-6638d54e7c89?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400"
-            alt="Two scientists working on computers in a laboratory"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
-        </div>
+       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden animate-water-ripple">
+         <div className="absolute inset-0">
+           <img loading="lazy"
+             src="https://images.unsplash.com/photo-1766297247924-6638d54e7c89?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400"
+             alt="Two scientists working on computers in a laboratory"
+             className="w-full h-full object-cover animate-water-wave"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
@@ -91,7 +91,7 @@ export function Careers() {
           >
             <h1 className="text-5xl md:text-6xl mb-4">Join Our Team</h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-              Build your career with a leading consulting company in petroleum and environmental services
+              Build your career with a leading consulting company in petroleum, Water and environmental services
             </p>
           </motion.div>
         </div>
@@ -112,19 +112,19 @@ export function Careers() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-6 bg-card border border-border rounded-xl text-center hover:shadow-lg transition-all"
-              >
-                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="text-accent" size={28} />
-                </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+             {benefits.map((benefit, index) => (
+               <motion.div
+                 key={benefit.title}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: index * 0.1 }}
+                 className="p-6 bg-card border border-border rounded-xl text-center hover:shadow-lg transition-all animate-water-ripple"
+               >
+                 <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                   <benefit.icon className="text-accent animate-water-drop" size={28} />
+                 </div>
                 <h3 className="mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
               </motion.div>
@@ -155,16 +155,16 @@ export function Careers() {
             </p>
           </motion.div>
 
-          <div className="space-y-6">
-            {positions.map((position, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl border border-border hover:shadow-lg transition-all"
-              >
+           <div className="space-y-6">
+             {positions.map((position, index) => (
+               <motion.div
+                 key={index}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: index * 0.1 }}
+                 className="bg-white p-8 rounded-xl border border-border hover:shadow-lg transition-all animate-water-ripple"
+               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-2xl mb-2">{position.title}</h3>
