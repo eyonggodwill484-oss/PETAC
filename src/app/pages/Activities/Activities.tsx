@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Calendar, MapPin } from 'lucide-react';
-import { useSEO } from '../hooks/useSEO';
+import { useSEO } from '../../hooks/useSEO';
 
 export function Activities() {
   useSEO('Our Activities', 'Discover the key activities and operations conducted by PETAC Consulting SARL in Cameroon.');

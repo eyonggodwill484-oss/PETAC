@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router';
 import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Services } from './pages/Services';
-import { Activities } from './pages/Activities';
-import { Careers } from './pages/Careers';
-import { Contact } from './pages/Contact';
+import { Home } from './pages/Home/Home';
+import { About } from './pages/About/About';
+import { Services } from './pages/Services/Services';
+import { Activities } from './pages/Activities/Activities';
+import { Careers } from './pages/Carrier/Careers';
+import { Contact } from './pages/Contact Us/Contact';
 
 export const router = createBrowserRouter([
   {

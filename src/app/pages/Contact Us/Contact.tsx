@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { useSEO } from '../hooks/useSEO';
+import { useSEO } from '../../hooks/useSEO';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // WEB3FORMS SETUP

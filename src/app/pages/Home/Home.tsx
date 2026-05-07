@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router';
 import { ArrowLeft, ArrowRight, CheckCircle, Droplet, FlaskConical, Shield, Factory } from 'lucide-react';
-import { useSEO } from '../hooks/useSEO';  
+import { useSEO } from '../../hooks/useSEO';  
 import ThemImage from '../../imports/them.png';
 
 

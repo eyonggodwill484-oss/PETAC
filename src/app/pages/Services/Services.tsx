@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
-import { useSEO } from '../hooks/useSEO';
+import { useSEO } from '../../hooks/useSEO';
 import {
   ShieldCheck,
   Truck,

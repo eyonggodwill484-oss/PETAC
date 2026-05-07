@@ -120,279 +120,274 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+   * {
+     @apply border-border outline-ring/50;
+   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+   body {
+     @apply bg-background text-foreground;
+   }
 
-  /* Water-like animations */
-  .animate-water-wave {
-    background: linear-gradient(
-      90deg,
-      var(--accent) 0%,
-      var(--accent)/80 50%,
-      var(--accent) 100%
-    );
-    background-size: 200% 100%;
-    animation: waterFlow 3s ease-in-out infinite;
-  }
+   /* Water-like animations */
+   .animate-water-wave {
+     background: linear-gradient(
+       90deg,
+       var(--accent) 0%,
+       var(--accent)/80 50%,
+       var(--accent) 100%
+     );
+     background-size: 200% 100%;
+     animation: waterFlow 3s ease-in-out infinite;
+   }
 
-  @keyframes waterFlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+   @keyframes waterFlow {
+     0% {
+       background-position: 0% 50%;
+     }
+     50% {
+       background-position: 100% 50%;
+     }
+     100% {
+       background-position: 0% 50%;
+     }
+   }
 
-  .animate-water-ripple {
-    position: relative;
-    overflow: hidden;
-  }
+   .animate-water-ripple {
+     position: relative;
+     overflow: hidden;
+   }
 
-  .animate-water-ripple::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 40%);
-    animation: ripple 4s linear infinite;
-    pointer-events: none;
-  }
+   .animate-water-ripple::after {
+     content: '';
+     position: absolute;
+     top: -50%;
+     left: -50%;
+     width: 200%;
+     height: 200%;
+     background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 40%);
+     animation: ripple 4s linear infinite;
+     pointer-events: none;
+   }
 
-  .animate-water-drop {
-    position: relative;
-  }
+   .animate-water-drop {
+     position: relative;
+   }
 
-  .animate-water-drop::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: drop 2s ease-out infinite;
-  }
+   .animate-water-drop::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 50%;
+     width: 4px;
+     height: 4px;
+     background: var(--accent);
+     border-radius: 50%;
+     animation: drop 2s ease-out infinite;
+   }
 
-  @keyframes drop {
-    0% {
-      transform: translate(-50%, -10px) scale(0);
-      opacity: 1;
-    }
-    30% {
-      transform: translate(-50%, 0) scale(1.2);
-      opacity: 0.8;
-    }
-    100% {
-      transform: translate(-50%, 20px) scale(0.2);
-      opacity: 0;
-    }
-  }
+   @keyframes drop {
+     0% {
+       transform: translate(-50%, -10px) scale(0);
+       opacity: 1;
+     }
+     30% {
+       transform: translate(-50%, 0) scale(1.2);
+       opacity: 0.8;
+     }
+     100% {
+       transform: translate(-50%, 20px) scale(0.2);
+       opacity: 0;
+     }
+   }
 
-  /* Enhanced motion animations for components */
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
+   /* Enhanced motion animations for components */
+   .animate-float {
+     animation: float 6s ease-in-out infinite;
+   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
+   @keyframes float {
+     0%, 100% {
+       transform: translateY(0px);
+     }
+     50% {
+       transform: translateY(-10px);
+     }
+   }
 
-  /* Water text effect */
-  .bg-gradient-water {
-    background: linear-gradient(
-      45deg,
-      var(--accent),
-      var(--secondary),
-      var(--accent)
-    );
-    background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
-  }
+   /* Water text effect */
+   .bg-gradient-water {
+     background: linear-gradient(
+       45deg,
+       var(--accent),
+       var(--secondary),
+       var(--accent)
+     );
+     background-size: 200% 200%;
+     animation: gradientShift 8s ease infinite;
+   }
 
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+   @keyframes gradientShift {
+     0% {
+       background-position: 0% 50%;
+     }
+     50% {
+       background-position: 100% 50%;
+     }
+     100% {
+       background-position: 0% 50%;
+     }
+   }
 
-  /* Additional water effects for more dynamic feel */
-  .animate-water-current {
-    animation: waterCurrent 5s linear infinite;
-  }
+   /* Additional water effects for more dynamic feel */
+   .animate-water-current {
+     animation: waterCurrent 5s linear infinite;
+   }
 
-  @keyframes waterCurrent {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
-  }
+   @keyframes waterCurrent {
+     0% {
+       background-position: 0% 0%;
+     }
+     100% {
+       background-position: 100% 100%;
+     }
+   }
 
-  .animate-bubble {
-    position: relative;
-  }
+   .animate-bubble {
+     position: relative;
+   }
 
-  .animate-bubble::before,
-  .animate-bubble::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: var(--accent)/20;
-    animation: bubbleUp 4s ease-in-out infinite;
-  }
+   .animate-bubble::before,
+   .animate-bubble::after {
+     content: '';
+     position: absolute;
+     border-radius: 50%;
+     background: var(--accent)/20;
+     animation: bubbleUp 4s ease-in-out infinite;
+   }
 
-  .animate-bubble::before {
-    width: 6px;
-    height: 6px;
-    left: 20%;
-    bottom: -10px;
-    animation-delay: 0s;
-  }
+   .animate-bubble::before {
+     width: 6px;
+     height: 6px;
+     left: 20%;
+     bottom: -10px;
+     animation-delay: 0s;
+   }
 
-  .animate-bubble::after {
-    width: 4px;
-    height: 4px;
-    left: 70%;
-    bottom: -5px;
-    animation-delay: 2s;
-  }
+   .animate-bubble::after {
+     width: 4px;
+     height: 4px;
+     left: 70%;
+     bottom: -5px;
+     animation-delay: 2s;
+   }
 
-  @keyframes bubbleUp {
-    0% {
-      transform: translateY(0) scale(0);
-      opacity: 0;
-    }
-    30% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(-100px) scale(1);
-      opacity: 0;
-    }
-  }
+   @keyframes bubbleUp {
+     0% {
+       transform: translateY(0) scale(0);
+       opacity: 0;
+     }
+     30% {
+       opacity: 0.5;
+     }
+     100% {
+       transform: translateY(-100px) scale(1);
+       opacity: 0;
+     }
+   }
 
-  /* Subtle pulsing for emphasis */
-  .animate-pulse-water {
-    animation: pulseWater 3s ease-in-out infinite;
-  }
+   /* Subtle pulsing for emphasis */
+   .animate-pulse-water {
+     animation: pulseWater 3s ease-in-out infinite;
+   }
 
-  @keyframes pulseWater {
-    0%, 100% {
-      opacity: 0.7;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
+   @keyframes pulseWater {
+     0%, 100% {
+       opacity: 0.7;
+     }
+     50% {
+       opacity: 1;
+     }
+   }
 
-  /* Wave effect for text or dividers */
-  .animate-water-line {
-    position: relative;
-    overflow: hidden;
-  }
+   /* Wave effect for text or dividers */
+   .animate-water-line {
+     position: relative;
+     overflow: hidden;
+   }
 
-  .animate-water-line::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      var(--accent)/30,
-      transparent
-    );
-    animation: waterLine 2s infinite;
-  }
+   .animate-water-line::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(
+       90deg,
+       transparent,
+       var(--accent)/30,
+       transparent
+     );
+     animation: waterLine 2s infinite;
+   }
 
-  @keyframes waterLine {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 100%;
-    }
-  }
-}
+   @keyframes waterLine {
+     0% {
+       left: -100%;
+     }
+     100% {
+       left: 100%;
+     }
+   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+   /**
+   * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+   * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+   */
 
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
+   html {
+     font-size: var(--font-size);
+   }
 
-  html {
-    font-size: var(--font-size);
-  }
+   h1 {
+     font-size: var(--text-2xl);
+     font-weight: var(--font-weight-medium);
+     line-height: 1.5;
+   }
 
-  h1 {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
+   h2 {
+     font-size: var(--text-xl);
+     font-weight: var(--font-weight-medium);
+     line-height: 1.5;
+   }
 
-  h2 {
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
+   h3 {
+     font-size: var(--text-lg);
+     font-weight: var(--font-weight-medium);
+     line-height: 1.5;
+   }
 
-  h3 {
-    font-size: var(--text-lg);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
+   h4 {
+     font-size: var(--text-base);
+     font-weight: var(--font-weight-medium);
+     line-height: 1.5;
+   }
 
-  h4 {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
+   label {
+     font-size: var(--text-base);
+     font-weight: var(--font-weight-medium);
+     line-height: 1.5;
+   }
 
-  label {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
+   button {
+     font-size: var(--text-base);
+     font-weight: var(--font-weight-medium);
+     line-height: 1.5;
+   }
 
-  button {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
-
-  input {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-normal);
-    line-height: 1.5;
-  }
+   input {
+     font-size: var(--text-base);
+     font-weight: var(--font-weight-normal);
+     line-height: 1.5;
+   }
 }

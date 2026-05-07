@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { Briefcase, MapPin, Clock, GraduationCap, Users, TrendingUp, Award } from 'lucide-react';
-import { useSEO } from '../hooks/useSEO';
+import { useSEO } from '../../hooks/useSEO';
 
 export function Careers() {
   useSEO('Careers', 'Join the PETAC Consulting SARL team and build your career in petroleum and environmental services.');
