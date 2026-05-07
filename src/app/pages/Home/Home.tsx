@@ -12,7 +12,6 @@ import lab2Image from '../../../imports/lab2.png';
 
 
 
-
 const heroImages = [
    {
      src: 'https://images.unsplash.com/photo-1596980786765-775174984ec9?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400',
