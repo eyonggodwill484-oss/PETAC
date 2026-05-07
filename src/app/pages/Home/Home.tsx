@@ -4,6 +4,13 @@ import { Link } from 'react-router';
 import { ArrowLeft, ArrowRight, CheckCircle, Droplet, FlaskConical, Shield, Factory } from 'lucide-react';
 import { useSEO } from '../../hooks/useSEO';  
 import ThemImage from '../../../imports/them.png';
+import petroImage from '../../../imports/petro.png';
+import environmentImage from '../../../imports/environment.png';
+import labImage from '../../../imports/lab.png';
+import lab2Image from '../../../imports/lab2.png';
+
+
+
 
 
 const heroImages = [
@@ -47,21 +54,26 @@ export function Home() {
       icon: Factory,
       title: 'Petroleum Analysis',
       description: 'Comprehensive testing and quality control for petroleum products',
+      highlight: 'Comprehensive solutions for your technical and consulting needs',
+      image: petroImage,
     },
     {
       icon: Droplet,
       title: 'Environmental Monitoring',
       description: 'Water, soil, air quality testing and analysis',
+      image: environmentImage,
     },
     {
       icon: FlaskConical,
       title: 'Laboratory Services',
       description: 'ISO 17025 accredited laboratory testing and analysis',
+      image: labImage,
     },
     {
       icon: Shield,
       title: 'Quality Control',
       description: 'Inspection, sampling, and quality assurance services',
+      image: lab2Image,
     },
   ];
 
@@ -257,24 +269,40 @@ export function Home() {
              </p>
            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-6 bg-card border border-border rounded-xl hover:shadow-lg transition-all hover:-translate-y-1 group"
-              >
-                 <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                   <service.icon className="text-accent size={28} animate-water-drop" />
-                 </div>
-                <h3 className="mb-2">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </motion.div>
-            ))}
-          </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+             {services.map((service, index) => (
+               <motion.div
+                 key={service.title}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: index * 0.1 }}
+                 className="p-6 bg-card border border-border rounded-xl hover:shadow-lg transition-all hover:-translate-y-1 group"
+               >
+                  {service.image && (
+                    <div className="mb-4 overflow-hidden rounded-lg">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  {!service.image && (
+                    <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                      <service.icon className="text-accent size={28} animate-water-drop" />
+                    </div>
+                  )}
+                 <h3 className="mb-2">{service.title}</h3>
+                 <p className="text-muted-foreground mb-3">{service.description}</p>
+                 {service.highlight && (
+                   <p className="text-sm font-semibold text-accent border-l-4 border-accent pl-3 py-1 bg-accent/5">
+                     {service.highlight}
+                   </p>
+                 )}
+               </motion.div>
+             ))}
+           </div>
 
           <div className="text-center mt-10">
             <Link

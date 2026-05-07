@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { useSEO } from '../../hooks/useSEO';
+import petroImage from '../../../imports/petro.png';
 import {
   ShieldCheck,
   Truck,
@@ -151,13 +152,22 @@ export function Services() {
                  transition={{ duration: 0.5, delay: index * 0.05 }}
                  className="bg-card border border-border p-8 rounded-2xl hover:shadow-2xl hover:border-accent/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 animate-water-ripple"
                >
+                 {index === 2 && (
+                   <div className="mb-4 overflow-hidden rounded-lg">
+                     <img
+                       src={petroImage}
+                       alt="Petroleum Analysis"
+                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                     />
+                   </div>
+                 )}
                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-500 shadow-sm">
                    <service.icon className="text-accent group-hover:text-white transition-colors duration-500 animate-water-drop" size={32} />
                  </div>
-                <h3 className="text-2xl font-bold mb-4 leading-tight group-hover:text-accent transition-colors duration-300">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed flex-grow">{service.description}</p>
-              </motion.div>
-            ))}
+                 <h3 className="text-2xl font-bold mb-4 leading-tight group-hover:text-accent transition-colors duration-300">{service.title}</h3>
+                 <p className="text-muted-foreground leading-relaxed flex-grow">{service.description}</p>
+               </motion.div>
+             ))}
           </div>
         </div>
       </section>
