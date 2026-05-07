@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { Target, Eye, Heart, Award, Users, TrendingUp } from 'lucide-react';
 import { useSEO } from '../../hooks/useSEO';
-import ThemImage from '../../imports/them.png';
-import Image1 from '../../imports/IMAGE1.png';
+import ThemImage from '../../../imports/them.png';
+import Image1 from '../../../imports/IMAGE1.png';
 
 
 export function About() {
