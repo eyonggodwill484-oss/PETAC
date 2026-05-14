@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import { LiveChat } from './LiveChat';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
@@ -18,6 +19,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <LiveChat />
     </div>
   );
 }

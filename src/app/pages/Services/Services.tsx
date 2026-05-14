@@ -22,6 +22,9 @@ import {
   Settings,
   CheckCircle2
 } from 'lucide-react';
+import petacImage from '../../../imports/lab4.png';
+
+
 
 export function Services() {
   useSEO('Our Services', 'Explore our comprehensive range of specialized services in petroleum, water analysis, and environmental testing.');
@@ -116,15 +119,16 @@ export function Services() {
 
   return (
     <div>
-       <section className="relative h-[65vh] flex items-center justify-center overflow-hidden animate-water-ripple">
-         <div className="absolute inset-0">
-           <img loading="lazy"
-             src="https://images.unsplash.com/photo-1581093449818-2655b2467fd6?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=1400"
-             alt="person in purple long sleeve shirt and white pants sitting on gray and black digital device"
-             className="w-full h-full object-cover animate-water-wave"
-           />
-           <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/80 to-primary/95"></div>
-         </div>
+        <section className="relative h-[65vh] flex items-center justify-center overflow-hidden animate-water-ripple">
+          <div className="absolute inset-0">
+            <img
+              loading="lazy"
+              src={petacImage}
+              alt="PETAC Laboratory Services"
+              className="w-full h-full object-cover animate-water-wave"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/60"></div>
+          </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white mt-8">
           <motion.div

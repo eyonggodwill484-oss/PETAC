@@ -4,11 +4,10 @@ import { Link } from 'react-router';
 import { ArrowLeft, ArrowRight, CheckCircle, Droplet, FlaskConical, Shield, Factory } from 'lucide-react';
 import { useSEO } from '../../hooks/useSEO';  
 import ThemImage from '../../../imports/them.png';
-import petroImage from '../../../imports/petro.png';
+import petroImage from '../../../imports/lab3.png';
 import environmentImage from '../../../imports/environment.png';
 import labImage from '../../../imports/lab.png';
 import lab2Image from '../../../imports/lab2.png';
-
 
 
 
@@ -343,17 +342,13 @@ export function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="grid grid-cols-2 gap-4"
+              className="relative"
             >
-              <img loading="lazy"
-                src="https://images.unsplash.com/photo-1758573467240-f944226c2026?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=600"
-                alt="Young woman looking through a microscope in a lab"
-                className="rounded-lg w-full h-64 object-cover"
-              />
-              <img loading="lazy"
-                src="https://images.unsplash.com/photo-1726731782158-fcf6822b6ca4?crop=entropy&cs=tinysrgb&fit=max&fm=webp&q=60&w=600"
-                alt="A factory with a lot of red and white pipes"
-                className="rounded-lg w-full h-64 object-cover mt-8"
+              <img
+                loading="lazy"
+                src={ThemImage}
+                alt="PETAC Consulting Team"
+                className="rounded-xl w-full h-[500px] object-cover shadow-xl"
               />
             </motion.div>
           </div>
