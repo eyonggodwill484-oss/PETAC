@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { useSEO } from '../../hooks/useSEO';
-import petroImage from '../../../imports/petro.png';
+
 import {
   ShieldCheck,
   Truck,
@@ -16,14 +16,9 @@ import {
   GraduationCap,
   BookOpen,
   Briefcase,
-  ClipboardList,
-  FlaskConical,
-  TrendingUp,
-  Settings,
   CheckCircle2
 } from 'lucide-react';
-import petacImage from '../../../imports/lab4.png';
-
+import petacImage from '../../../imports/services.jpg';
 
 
 export function Services() {
@@ -33,99 +28,94 @@ export function Services() {
     {
       icon: ShieldCheck,
       title: 'Consultancy & Quality Control Inspection',
-      description: 'We provide expert consultancy and independent quality control inspection services to ensure that products meet required specifications and industry expectations. Our solutions help clients minimize risks, maintain compliance with international standards, and enhance product integrity, ultimately improving market acceptance and operational performance.',
+      description: 'We provide expert consultancy and independent quality control inspection services...',
+      slug: 'consultancy-quality-control',
     },
     {
       icon: Truck,
       title: 'Sampling and Transportation of Products',
-      description: 'Our sampling and product handling services are carried out with precision and professionalism to preserve the integrity of materials from source to laboratory. We ensure that all processes align with international best practices, enabling clients to rely on representative samples for accurate evaluation and decision-making.',
+      description: 'Our sampling and product handling services preserve the integrity of materials...',
+      slug: 'sampling-transportation',
     },
     {
       icon: Factory,
       title: 'Petroleum Products Analysis',
-      description: 'We offer advanced analytical services for petroleum products to determine quality, composition, and compliance with global specifications. Our work supports efficient refining, trading, and distribution activities while helping investors and stakeholders make informed decisions based on reliable data collected from the analysis of Crude Oil, gasoline, diesel, jetA1 fuel, kerosene, bitumen, fuel oil etc.',
+      description: 'We offer advanced analytical services for petroleum products including crude oil...',
+      slug: 'petroleum-analysis',
     },
     {
       icon: Droplet,
       title: 'Water Analysis',
-      description: 'Our water analysis services provide critical insights into water quality for industrial, environmental, and domestic applications & uses. It can be potable water, surface water, underground water or waste water. By aligning with international standards, we help clients ensure safety, regulatory compliance, and sustainable water resource quality management.',
+      description: 'Our water analysis services provide critical insights into water quality...',
+      slug: 'water-analysis',
     },
     {
       icon: Cloud,
       title: 'Gas Analysis',
-      description: 'We deliver precise gas analysis solutions that support industrial operations, environmental safety, and regulatory compliance. Our expertise ensures accurate characterization of gases such as butane, methane etc contributing to improved efficiency, safety, and environmental protection.',
+      description: 'We deliver precise gas analysis solutions for industrial operations...',
+      slug: 'gas-analysis',
     },
     {
       icon: Gem,
       title: 'Minerals Analysis',
-      description: 'Our minerals analysis services provide detailed evaluation of material composition and quality of minerals such as gold, silver, diamond etc, supporting mining operations, resource management, and investment decisions. We emphasize accuracy and consistency to enhance value across the supply chain.',
+      description: 'Our minerals analysis provides detailed evaluation of material composition...',
+      slug: 'minerals-analysis',
     },
     {
       icon: Mountain,
       title: 'Soil Analysis',
-      description: 'We offer comprehensive soil analysis services to assess quality, contamination levels, and suitability for various applications. We analyze heavy metals in soil, hydrocarbons contaminants in soil etc. Our results support environmental protection, agricultural productivity, and construction planning, all aligned with recognized global global IFC soil contaminationand quality reference Standard time .',
+      description: 'We offer comprehensive soil analysis to assess quality and contamination...',
+      slug: 'soil-analysis',
     },
     {
       icon: Leaf,
       title: 'Environmental Monitoring & Analysis',
-      description: 'We provide continuous environmental monitoring and analytical services for air, water, soil, meteorological parameters and noise levels. Our approach helps organizations meet environmental regulations, reduce risks, and promote sustainable practices while maintaining operational efficiency in alignment with ISO/IEC 1996 guidelines.',
+      description: 'We provide continuous environmental monitoring for air, water, soil...',
+      slug: 'environmental-monitoring',
     },
     {
       icon: Scale,
       title: 'Calibration of Equipment and Instruments',
-      description: 'We ensure that instruments and equipment operate at optimal accuracy through professional calibration services. By adhering to international metrology standards, we enhance measurement reliability, reduce uncertainties, and support high-quality outputs across operations in alignment with ISO/IEC 17025 guidelines.',
+      description: 'We ensure instruments operate at optimal accuracy through calibration...',
+      slug: 'calibration-services',
     },
     {
       icon: FileCheck,
       title: 'Validation and Reporting of Analytical Results',
-      description: 'We offer robust validation and reporting services to ensure that all analytical results are accurate, traceable, and compliant with international quality standards. Our reports are designed to support critical decision-making and provide confidence to clients, regulators, and investors.',
+      description: 'We offer validation and reporting services for accurate analytical results...',
+      slug: 'validation-reporting',
     },
     {
       icon: GraduationCap,
       title: 'Recruitment of Academic & professional Internship Students',
-      description: 'We support the development of future professionals by recruiting and placing qualified academic and internship students. This initiative helps bridge the gap between theoretical knowledge and practical industry experience.',
+      description: 'We support future professionals by recruiting and placing internship students...',
+      slug: 'internship-recruitment',
     },
     {
       icon: BookOpen,
       title: 'Training of Personnels & Workers',
-      description: 'We provide specialized training programs designed to enhance technical competence, safety awareness, and operational efficiency. Our training aligns with industry standards and equips personnels with the skills needed to deliver high-quality performance and outputs.',
+      description: 'We provide specialized training programs to enhance technical competence...',
+      slug: 'training-services',
     },
     {
       icon: Briefcase,
       title: 'Placement of Workers to Partnering Companies',
-      description: 'We facilitate the placement of skilled professionals into partner organizations, ensuring the right talent meets industry demands. This service supports workforce efficiency and contributes to the success of both employers and employees and eventually reduces unemployment rate.',
+      description: 'We facilitate placement of skilled professionals into partner organizations...',
+      slug: 'worker-placement',
     },
-    {
-      icon: ClipboardList,
-      title: 'Auditing of Management Personnel',
-      description: 'We conduct professional assessments of management systems and personnel performance to identify strengths, gaps, and improvement opportunities. Our audits help our company and other organizations strengthen governance, enhance accountability, and align with best practices.',
-    },
-    {
-      icon: FlaskConical,
-      title: 'Setting Up of Standard Petroleum, water, & environmental Laboratories',
-      description: 'We provide end-to-end support in establishing petroleum, water & environmental laboratories that meet international standards. Our expertise ensures that facilities are designed for efficiency, accuracy, and compliance, enabling clients to achieve reliable analytical results.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Investment Proposals to Potential Investors',
-      description: 'We develop well-structured and data-driven investment proposals that highlight opportunities, risks, and expected returns. Our approach provides investors with confidence and clarity, supporting informed decision-making and sustainable investments.',
-    },
-    {
-      icon: Settings,
-      title: 'Routine Works and Travels',
-      description: 'We offer flexible support services, including routine operational tasks and field assignments, ensuring continuity and efficiency in client operations. Our team is equipped to operate across diverse environments while maintaining high standards of professionalism and reliability.',
-    }
   ];
 
   return (
     <div>
         <section className="relative h-[65vh] flex items-center justify-center overflow-hidden animate-water-ripple">
+
           <div className="absolute inset-0">
             <img
               loading="lazy"
               src={petacImage}
               alt="PETAC Laboratory Services"
               className="w-full h-full object-cover animate-water-wave"
+              style={{ filter: 'blur(2px)' }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/60"></div>
           </div>
@@ -137,8 +127,8 @@ export function Services() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl mb-8 font-bold tracking-tight">Our Services</h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-light">
-              At PETAC Consulting SARL, we deliver a comprehensive range of specialized services designed to support individuals, private industries and state owned companies in achieving operational excellence, regulatory compliance, and sustainable growth. Our approach integrates globally recognized standards, advanced technical expertise, and a commitment to accuracy and reliability.
+            <p className="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed font-medium" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+              At PETAC Consulting SARL, we deliver a comprehensive range of specialized services designed to support individuals, private industries and state-owned enterprises in achieving operational excellence, regulatory compliance, and sustainable growth. Our approach integrates globally recognized standards, advanced technical expertise, and an unwavering commitment to accuracy and reliability.
             </p>
           </motion.div>
         </div>
@@ -148,30 +138,39 @@ export function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesList.map((service, index) => (
-               <motion.div
-                 key={index}
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true, margin: "-50px" }}
-                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                 className="bg-card border border-border p-8 rounded-2xl hover:shadow-2xl hover:border-accent/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 animate-water-ripple"
-               >
-                 {index === 2 && (
-                   <div className="mb-4 overflow-hidden rounded-lg">
-                     <img
-                       src={petroImage}
-                       alt="Petroleum Analysis"
-                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                     />
-                   </div>
-                 )}
-                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-500 shadow-sm">
-                   <service.icon className="text-accent group-hover:text-white transition-colors duration-500 animate-water-drop" size={32} />
-                 </div>
-                 <h3 className="text-2xl font-bold mb-4 leading-tight group-hover:text-accent transition-colors duration-300">{service.title}</h3>
-                 <p className="text-muted-foreground leading-relaxed flex-grow">{service.description}</p>
-               </motion.div>
-             ))}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="bg-card border border-border p-8 rounded-2xl hover:shadow-2xl hover:border-accent/50 transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 animate-water-ripple"
+              >
+                {/* Keep a consistent card size (no conditional image area) */}
+                <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-500 shadow-sm">
+                  <service.icon className="text-accent group-hover:text-white transition-colors duration-500 animate-water-drop" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 leading-tight group-hover:text-accent transition-colors duration-300">
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="hover:text-[#FE6404] transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </h3>
+
+                <p className="text-muted-foreground leading-relaxed flex-grow mb-4">{service.description}</p>
+                <Link
+                  to={`/services/${service.slug}`}
+                  className="inline-flex items-center text-accent font-medium hover:text-accent/80 transition-colors group/link"
+                >
+                  Read More
+                  <svg className="ml-1 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

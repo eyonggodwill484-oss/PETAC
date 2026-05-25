@@ -141,7 +141,7 @@ export function Home() {
            <div className="max-w-3xl">
 
             {/* Badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -149,7 +149,7 @@ export function Home() {
             >
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               ISO 17025 Accredited · Since 2026
-            </motion.div>
+            </motion.div> */}
 
             {/* Headline */}
             <motion.h1
@@ -172,7 +172,7 @@ export function Home() {
               transition={{ duration: 0.75, delay: 0.3 }}
               className="text-lg md:text-xl text-white/75 mb-10 max-w-2xl leading-relaxed"
             >
-              Delivering accurate, reliable, and internationally compliant technical services in petroleum analysis, water analysis,  environmental monitoring, and quality control — from Douala, Cameroon.
+              Delivering accurate, reliable, and internationally compliant technical services in petroleum analysis, water analysis,  environmental monitoring, and quality control  from Douala, Cameroon.
             </motion.p>
 
             {/* CTAs */}
